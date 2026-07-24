@@ -1,0 +1,16 @@
+.git
+.gitignore
+.gitattributes
+*.pyc
+__pycache__/
+*.so
+*.egg
+build/
+dist/
+*.egg-info/
+venv/
+env/
+.DS_Store
+.idea/
+.vscode/
+logs/
