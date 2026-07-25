@@ -5,7 +5,7 @@
   "keywords": ["telegram", "bot", "ai", "docker"],
   "env": {
     "TELEGRAM_BOT_TOKEN": {
-      "description": "Your Telegram bot token from @BotFather",
+      "description": "8891028683:AAGZEYW8QWwablBtH-FkER5v9btnAuzbLiY",
       "required": true
     },
     "BACKEND_API_URL": {
