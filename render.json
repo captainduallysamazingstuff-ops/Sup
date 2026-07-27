@@ -41,3 +41,32 @@
     }
   ]
 }
+{
+  "$schema": "https://render.com/deploy?repo=captainduallysamazingstuff-ops/Sup",
+  "services": [
+    {
+      "type": "web",
+      "name": "supervisor-backend",
+      "env": "docker",
+      "plan": "free",
+      "autoDeploy": true,
+      "dockerCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+      "envVars": [
+        { "key": "APP_NAME", "value": "TelegramBotBackend" },
+        { "key": "DEBUG", "value": "false" }
+      ]
+    },
+    {
+      "type": "background",
+      "name": "telegram-bot",
+      "env": "docker",
+      "plan": "free",
+      "autoDeploy": true,
+      "dockerfile": "Dockerfile.bot",
+      "envVars": [
+        { "key": "TELEGRAM_BOT_TOKEN", "generate": "required" },
+        { "key": "BACKEND_API_URL", "generate": "required" }
+      ]
+    }
+  ]
+}
