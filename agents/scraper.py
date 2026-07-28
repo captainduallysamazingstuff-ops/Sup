@@ -7,7 +7,7 @@ from .utils import setup_logger
 
 logger = setup_logger("/tmp/agent_orchestrator.log")
 
-class ScraperAgent:
+class ScrapingAgent:
     """
     Retrieves content from a target URL, extracts headlines and paragraphs,
     and formats them as markdown.

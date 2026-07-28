@@ -7,7 +7,7 @@ from .utils import setup_logger
 
 logger = setup_logger("/tmp/agent_orchestrator.log")
 
-class PlannerAgent:
+class PlanningAgent:
     """
     Decomposes a user prompt into discrete tasks and creates a WorkflowPlan.
     """
